@@ -1,0 +1,218 @@
+# Results for training distributions calculated by paper2_02_distributions.m 
+# --> table in appendix of paper2 
+# 
+# Date: 20-Dec-2021 
+# 
+# Comparison of categories: high,high+cond (findings) 
+# Tick mode: 2 (exact choice of categories) 
+# Log-likelihood normalization: cat 
+# Cross validation: 1 
+# 
+# m = 1: cafpas (N_m = 142  143  142  143  149  149  147  135  149  149) 
+# 
+# Parameter 1 CA1 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          129        0.171          nan        0.167          nan        1.000          nan        -3.80        -4.19 
+           1       cafpas         beta    high+cond           12        0.441          nan        0.294          nan        1.000          nan        -4.58        -4.19 
+# 
+# Parameter 2 CA2 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          130        0.232          nan        0.193          nan        1.000          nan        -4.11        -4.36 
+           1       cafpas         beta    high+cond           12        0.519          nan        0.281          nan        1.000          nan        -4.60        -4.36 
+# 
+# Parameter 3 CA3 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          130        0.405          nan        0.249          nan        1.000          nan        -4.52        -4.53 
+           1       cafpas         beta    high+cond           11        0.534          nan        0.246          nan        1.000          nan        -4.54        -4.53 
+# 
+# Parameter 4 CA4 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          130        0.658          nan        0.194          nan        1.000          nan        -4.31        -4.07 
+           1       cafpas         beta    high+cond           12        0.695          nan        0.114          nan        1.000          nan        -3.83        -4.07 
+# 
+# Parameter 5 CU1 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          135        0.278          nan        0.243          nan        1.000          nan        -4.26        -4.19 
+           1       cafpas         beta    high+cond           14        0.238          nan        0.189          nan        1.000          nan        -4.13        -4.19 
+# 
+# Parameter 6 CU2 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          135        0.392          nan        0.266          nan        1.000          nan        -4.53        -4.54 
+           1       cafpas         beta    high+cond           14        0.416          nan        0.281          nan        1.000          nan        -4.56        -4.54 
+# 
+# Parameter 7 CB 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          132        0.255          nan        0.201          nan        1.000          nan        -4.20        -4.37 
+           1       cafpas         beta    high+cond           14        0.409          nan        0.283          nan        1.000          nan        -4.55        -4.37 
+# 
+# Parameter 8 CN 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          122        0.243          nan        0.204          nan        1.000          nan        -4.16        -4.13 
+           1       cafpas         beta    high+cond           12        0.237          nan        0.219          nan        1.000          nan        -4.11        -4.13 
+# 
+# Parameter 9 CC 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          134        0.148          nan        0.130          nan        1.000          nan        -3.68        -3.73 
+           1       cafpas         beta    high+cond           14        0.166          nan        0.130          nan        1.000          nan        -3.77        -3.73 
+# 
+# Parameter 10 CE 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           1       cafpas         beta         high          134        0.279          nan        0.212          nan        1.000          nan        -4.27        -4.31 
+           1       cafpas         beta    high+cond           14        0.305          nan        0.251          nan        1.000          nan        -4.34        -4.31 
+
+# m = 2: cafpas (N_m = 149  149  149  149  149  149  149  149  149  149) 
+# 
+# Parameter 1 CA1 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.172          nan        0.100          nan        1.000          nan        -3.63        -4.07 
+           2       cafpas         beta    high+cond           14        0.406          nan        0.247          nan        1.000          nan        -4.52        -4.07 
+# 
+# Parameter 2 CA2 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.244          nan        0.124          nan        1.000          nan        -3.88        -4.17 
+           2       cafpas         beta    high+cond           14        0.416          nan        0.225          nan        1.000          nan        -4.47        -4.17 
+# 
+# Parameter 3 CA3 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.431          nan        0.144          nan        1.000          nan        -4.08        -4.27 
+           2       cafpas         beta    high+cond           14        0.518          nan        0.218          nan        1.000          nan        -4.46        -4.27 
+# 
+# Parameter 4 CA4 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.638          nan        0.135          nan        1.000          nan        -4.00        -4.08 
+           2       cafpas         beta    high+cond           14        0.712          nan        0.166          nan        1.000          nan        -4.15        -4.08 
+# 
+# Parameter 5 CU1 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.273          nan        0.102          nan        1.000          nan        -3.72        -3.94 
+           2       cafpas         beta    high+cond           14        0.342          nan        0.161          nan        1.000          nan        -4.16        -3.94 
+# 
+# Parameter 6 CU2 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.400          nan        0.098          nan        1.000          nan        -3.70        -3.87 
+           2       cafpas         beta    high+cond           14        0.471          nan        0.138          nan        1.000          nan        -4.04        -3.87 
+# 
+# Parameter 7 CB 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.260          nan        0.077          nan        1.000          nan        -3.45        -3.81 
+           2       cafpas         beta    high+cond           14        0.386          nan        0.161          nan        1.000          nan        -4.17        -3.81 
+# 
+# Parameter 8 CN 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.255          nan        0.058          nan        1.000          nan        -3.16        -3.35 
+           2       cafpas         beta    high+cond           14        0.293          nan        0.084          nan        1.000          nan        -3.53        -3.35 
+# 
+# Parameter 9 CC 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.151          nan        0.079          nan        1.000          nan        -3.42        -3.46 
+           2       cafpas         beta    high+cond           14        0.164          nan        0.086          nan        1.000          nan        -3.50        -3.46 
+# 
+# Parameter 10 CE 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           2       cafpas         beta         high          135        0.285          nan        0.106          nan        1.000          nan        -3.76        -3.84 
+           2       cafpas         beta    high+cond           14        0.292          nan        0.127          nan        1.000          nan        -3.93        -3.84 
+
+# m = 3: cafpas (N_m = 149  149  149  149  149  149  149  149  149  149) 
+# 
+# Parameter 1 CA1 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.172          nan        0.100          nan        1.000          nan        -3.63        -4.07 
+           3       cafpas         beta    high+cond           14        0.409          nan        0.247          nan        1.000          nan        -4.52        -4.07 
+# 
+# Parameter 2 CA2 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.245          nan        0.120          nan        1.000          nan        -3.85        -4.15 
+           3       cafpas         beta    high+cond           14        0.411          nan        0.220          nan        1.000          nan        -4.45        -4.15 
+# 
+# Parameter 3 CA3 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.431          nan        0.141          nan        1.000          nan        -4.06        -4.25 
+           3       cafpas         beta    high+cond           14        0.519          nan        0.212          nan        1.000          nan        -4.44        -4.25 
+# 
+# Parameter 4 CA4 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.636          nan        0.131          nan        1.000          nan        -3.98        -4.06 
+           3       cafpas         beta    high+cond           14        0.706          nan        0.164          nan        1.000          nan        -4.15        -4.06 
+# 
+# Parameter 5 CU1 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.274          nan        0.100          nan        1.000          nan        -3.70        -3.91 
+           3       cafpas         beta    high+cond           14        0.345          nan        0.153          nan        1.000          nan        -4.12        -3.91 
+# 
+# Parameter 6 CU2 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.398          nan        0.098          nan        1.000          nan        -3.70        -3.87 
+           3       cafpas         beta    high+cond           14        0.477          nan        0.140          nan        1.000          nan        -4.05        -3.87 
+# 
+# Parameter 7 CB 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.260          nan        0.078          nan        1.000          nan        -3.46        -3.83 
+           3       cafpas         beta    high+cond           14        0.386          nan        0.165          nan        1.000          nan        -4.20        -3.83 
+# 
+# Parameter 8 CN 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.254          nan        0.056          nan        1.000          nan        -3.13        -3.33 
+           3       cafpas         beta    high+cond           14        0.295          nan        0.084          nan        1.000          nan        -3.53        -3.33 
+# 
+# Parameter 9 CC 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.150          nan        0.079          nan        1.000          nan        -3.41        -3.45 
+           3       cafpas         beta    high+cond           14        0.165          nan        0.086          nan        1.000          nan        -3.50        -3.45 
+# 
+# Parameter 10 CE 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           3       cafpas         beta         high          135        0.285          nan        0.108          nan        1.000          nan        -3.78        -3.85 
+           3       cafpas         beta    high+cond           14        0.292          nan        0.128          nan        1.000          nan        -3.93        -3.85 
+
+# m = 4: cafpas (N_m = 149  149  149  149  149  149  149  149  149  149) 
+# 
+# Parameter 1 CA1 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.172          nan        0.113          nan        1.000          nan        -3.72        -4.06 
+           4       cafpas         beta    high+cond           14        0.352          nan        0.215          nan        1.000          nan        -4.39        -4.06 
+# 
+# Parameter 2 CA2 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.242          nan        0.134          nan        1.000          nan        -3.94        -4.15 
+           4       cafpas         beta    high+cond           14        0.383          nan        0.197          nan        1.000          nan        -4.35        -4.15 
+# 
+# Parameter 3 CA3 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.435          nan        0.151          nan        1.000          nan        -4.12        -4.19 
+           4       cafpas         beta    high+cond           14        0.493          nan        0.173          nan        1.000          nan        -4.26        -4.19 
+# 
+# Parameter 4 CA4 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.639          nan        0.133          nan        1.000          nan        -3.99        -4.07 
+           4       cafpas         beta    high+cond           14        0.652          nan        0.158          nan        1.000          nan        -4.15        -4.07 
+# 
+# Parameter 5 CU1 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.277          nan        0.122          nan        1.000          nan        -3.89        -3.91 
+           4       cafpas         beta    high+cond           14        0.331          nan        0.126          nan        1.000          nan        -3.94        -3.91 
+# 
+# Parameter 6 CU2 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.408          nan        0.120          nan        1.000          nan        -3.90        -3.88 
+           4       cafpas         beta    high+cond           14        0.431          nan        0.116          nan        1.000          nan        -3.86        -3.88 
+# 
+# Parameter 7 CB 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.270          nan        0.092          nan        1.000          nan        -3.62        -3.75 
+           4       cafpas         beta    high+cond           14        0.349          nan        0.119          nan        1.000          nan        -3.88        -3.75 
+# 
+# Parameter 8 CN 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.260          nan        0.086          nan        1.000          nan        -3.55        -3.67 
+           4       cafpas         beta    high+cond           14        0.313          nan        0.110          nan        1.000          nan        -3.80        -3.67 
+# 
+# Parameter 9 CC 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.155          nan        0.082          nan        1.000          nan        -3.45        -3.50 
+           4       cafpas         beta    high+cond           14        0.176          nan        0.090          nan        1.000          nan        -3.55        -3.50 
+# 
+# Parameter 10 CE 
+#            m         meas         dist     category            N           mu          mu2          sig         sig2            w           w2       logcat       logsum
+           4       cafpas         beta         high          135        0.286          nan        0.116          nan        1.000          nan        -3.85        -3.84 
+           4       cafpas         beta    high+cond           14        0.318          nan        0.114          nan        1.000          nan        -3.84        -3.84 
+

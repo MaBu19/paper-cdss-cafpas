@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+\newcommand{\plotdir}{s3_methods}
+
+\newpage
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay] 
+
+
+\node[inner sep=0pt,scale=0.70] at ([xshift=3.8cm,yshift=-3cm]current page.north west){\includegraphics{./\plotdir/training_theo_certainty_nh-hi_1}}; 
+\node[inner sep=0pt,scale=0.70] at ([xshift=10.9cm,yshift=-3cm]current page.north west){\includegraphics{./\plotdir/training_theo_certainty_nh-hi_8}}; 
+\node[inner sep=0pt,scale=0.68] at ([xshift=17.9cm,yshift=-2.85cm]current page.north west){\includegraphics{./\plotdir/cafpas_classification_thresholds}}; 
+
+\node[inner sep=0pt,scale=2.0] at ([xshift=0.5cm,yshift=-1cm]current page.north west){\textsf{A}}; 
+\node[inner sep=0pt,scale=2.0] at ([xshift=7.6cm,yshift=-1cm]current page.north west){\textsf{B}}; 
+\node[inner sep=0pt,scale=2.0] at ([xshift=14.4cm,yshift=-1cm]current page.north west){\textsf{C}}; 
+
+\end{tikzpicture}	
+\end{document}

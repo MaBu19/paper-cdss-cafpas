@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{floatflt}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{matrix}
+
+
+\begin{document}
+\thispagestyle{empty}
+% plot style
+\newcommand{\plotdir}{s5_results_I_wadd-0}
+\newcommand{\plotstyle}{scatter_youden} 
+\newcommand{\append}{_Y90_wadd-0}  % hier noch kürzen 
+
+\newcommand{\modelA}{expert}
+\newcommand{\modelB}{lasso}
+\newcommand{\modelC}{elasticNet}
+\newcommand{\modelD}{randomForest}
+
+\newcommand{\textAa}{}
+\newcommand{\textAb}{Experts}
+\newcommand{\textAc}{}
+\newcommand{\textBa}{}
+\newcommand{\textBb}{Lasso Regression}
+\newcommand{\textBc}{}
+\newcommand{\textCa}{}
+\newcommand{\textCb}{Elastic Net}
+\newcommand{\textCc}{}
+\newcommand{\textDa}{}
+\newcommand{\textDb}{Random Forest}
+\newcommand{\textDc}{}
+
+
+% comparisons of categories
+\newcommand{\compA}{nh-hi}
+\newcommand{\compB}{high-high+cond}
+\newcommand{\compC}{high-high+recr}
+\newcommand{\compD}{none-device}
+\newcommand{\compE}{HA-CI}
+\newcommand{\compL}{legend}
+% ...
+
+
+% plot parameters
+\newcommand{\xstart}{4}
+\newcommand{\deltax}{3.3} % 3.2 an sich, fuer weights 3.5
+\newcommand{\deltaxII}{4}
+\newcommand{\ystart}{15}
+\newcommand{\deltay}{-4.1} %-3.9
+\newcommand{\trimleft}{0.64} % 0.72 an sich, fuer weights 0.65
+\newcommand{\trimleftacalos}{0.6}
+
+
+\begin{tikzpicture}[remember picture, overlay] 
+
+\tikzstyle{NS3}=[rectangle,draw=black,line width=0.4mm,text width=28.5mm, minimum width=30mm,align=center]
+\tikzstyle{DP1}=[dash pattern=on 4pt off 2pt]
+\tikzstyle{DP2}=[dash pattern=on 8pt off 2pt on 4pt off 1pt on 2pt off 1pt]
+\tikzstyle{DP3}=[dash pattern=on 10pt off 2pt]
+\tikzstyle{DP4}=[dash pattern=on 10pt off 2pt on 7 pt off 2pt]
+\tikzstyle{DP5}=[dash pattern=on 12pt off 2pt on 5pt off 2pt]
+
+
+
+% trim: lbrt
+    \node [shift={(0 cm,-20 cm)}]  at (current page.north west) 
+        {
+        
+\begin{tikzpicture}[remember picture, overlay] 
+% Legenden Kategorienvergleich (Spaltentitel) 
+%\foreach \i/\comp/\diag/\setno/\st/\texta/\textb in {1/\compA/findings/I/DP1/Normal hearing/Hearing impaired,2/\compB/findings/II/DP2/High-freq. HL/High-freq. \& cond. HL,3/\compC/findings/III/DP3/High-freq. HL/HF-HL \& Recruitment,4/\compD/reha/IV/DP4/No provision/Hearing device,5/\compE/reha/V/DP5/Hearing aid/Cochlear implant} 
+\foreach \i/\comp/\diag/\setno/\st/\texta/\textb in {1/\compA/findings/I/DP1/NH vs. HI/,2/\compB/findings/II/DP2/high vs. high+cond/,3/\compC/findings/III/DP3/high vs. high+recr/,4/\compD/reha/IV/DP4/None vs. device/,5/\compE/reha/V/DP5/HA vs. CI/} 
+{
+\node[NS3,\st] (c1) at ({\xstart+(\i-1)*\deltax-0.15},\ystart+2.7){Comparison \\ set \setno \\ \vspace{0.1cm} \scriptsize \texta \\ \vspace{-0.3cm} \textb}; %  \scriptsize (single)/joint 
+}
+
+%% Messungen (Zeilentitel) 
+\foreach \j/\texta/\textb/\textc in {1/\textBa/\textBb/\textBc,2/\textCa/\textCb/\textCc,3/\textDa/\textDb/\textDc}
+{
+\coordinate[label = center:\rotatebox{90}{\scriptsize \textbf{\texta}}] (L0) at (\xstart-3.3,{\ystart-0.2+(\j-1)*\deltay});
+\coordinate[label = center:\rotatebox{90}{\scriptsize \textbf{\textb}}] (L0) at (\xstart-3,{\ystart-0.2+(\j-1)*\deltay});
+\coordinate[label = center:\rotatebox{90}{\scriptsize \textbf{\textc}}] (L0) at (\xstart-2.7,{\ystart-0.2+(\j-1)*\deltay});
+} 
+
+
+%% Plots
+% Schleife über Zeilen (gleichartige Bilder Gösa bis Age) - evtl. erweitern auf alle 
+\foreach \j/\model in {1/\modelB,2/\modelC,3/\modelD}
+{
+
+\foreach \i/\comp in {1/\compA} % 1. Spalte anders wegen trim/startx
+{\node[inner sep=0pt] (russell) at ({\xstart-0.37+(\i-1)*\deltax},{\ystart-0.2+(\j-1)*\deltay}){\includegraphics[trim={0cm 0 0 0.2},clip]{./\plotdir/\plotstyle_\comp-\model\append}}; 
+}
+\foreach \i/\comp in {2/\compB,3/\compC,4/\compD,5/\compE} % Zeile 
+{ \node[inner sep=0pt] (russell) at ({\xstart+(\i-1)*\deltax},{\ystart-0.2+(\j-1)*\deltay}){\includegraphics[trim={\trimleft cm 0 0 0},clip]{./\plotdir/\plotstyle_\comp-\model\append}};    
+}
+}
+
+	
+			\end{tikzpicture}
+        };
+        \end{tikzpicture}
+        
+
+\end{document}

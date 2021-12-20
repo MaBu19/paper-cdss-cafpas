@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{floatflt}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{verbatim}
+%\usepackage[landscape]{geometry}
+\usetikzlibrary{matrix}
+
+
+\begin{document}
+%\thispagestyle{empty}
+\newcommand{\plotdir}{s7_results_II} 
+\newcommand{\plotstyle}{conf-mat_expert_dc} 
+\newcommand{\datachoice}{Y90_w} 
+\newcommand{\wx}{1023_wadd-1}
+\newcommand{\wy}{1024_wadd-1}
+\newcommand{\wz}{1025_wadd-1}
+
+% comparisons of categories
+\newcommand{\compnameA}{findings1}
+\newcommand{\compAa}{Normal hearing}
+\newcommand{\compAb}{High-frequency hearing loss}
+\newcommand{\compAc}{High-frequency + conductive hearing loss}
+
+\newcommand{\compnameB}{findings2}
+\newcommand{\compBa}{Normal hearing}
+\newcommand{\compBb}{High-frequency hearing loss}
+\newcommand{\compBc}{High-frequency hearing loss + recruitment}
+
+\newcommand{\compnameC}{treat}
+\newcommand{\compCa}{None}
+\newcommand{\compCb}{Hearing Aid}
+\newcommand{\compCc}{Cochlea Implant}
+
+
+
+
+
+
+% Zeilentitel
+\newcommand{\textAa}{}
+\newcommand{\textAb}{Expert} % für unlabeled {}
+\newcommand{\textAc}{}
+\newcommand{\textBa}{}
+\newcommand{\textBb}{Lasso Regression}
+\newcommand{\textBc}{}
+\newcommand{\textCa}{}
+\newcommand{\textCb}{Elastic Net}
+\newcommand{\textCc}{}
+\newcommand{\textDa}{}
+\newcommand{\textDb}{Random Forest}
+\newcommand{\textDc}{}
+\newcommand{\textEa}{}
+\newcommand{\textEb}{True labels}
+\newcommand{\textEc}{}
+
+
+\newcommand{\modelA}{expert}
+\newcommand{\modelB}{lasso}
+\newcommand{\modelC}{elasticNet}
+\newcommand{\modelD}{randomForest}
+\newcommand{\modelE}{true}
+
+
+
+% measurements/CAFPAs
+\newcommand{\dist}{beta-cafpas} 
+
+% plot parameters
+\newcommand{\xstart}{4.2} %4 
+\newcommand{\deltax}{5.55} %3.6
+\newcommand{\deltaxII}{5.75} %3.6
+\newcommand{\ystart}{15.5}
+\newcommand{\deltay}{-5.1}
+\newcommand{\trimleft}{0}
+\newcommand{\trimright}{2.5}
+
+
+
+\foreach \wei/\weitext in {\wx/uniform,\wy/rel-model,\wz/rel-all} 
+{
+
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay] 
+
+\tikzstyle{NS3}=[rectangle,draw=none,line width=0.7mm,text width=22mm, minimum width=45mm,align=center]
+\tikzstyle{DP1}=[dash pattern=on 4pt off 2pt]
+\tikzstyle{DP2}=[dash pattern=on 8pt off 2pt on 4pt off 1pt on 2pt off 1pt]
+\tikzstyle{DP3}=[dash pattern=on 10pt off 2pt]
+\tikzstyle{DP4}=[dash pattern=on 10pt off 2pt on 7 pt off 2pt]
+\tikzstyle{DP5}=[dash pattern=on 12pt off 2pt on 5pt off 2pt]
+
+
+% trim: lbrt
+    \node [shift={(0 cm,-20 cm)}]  at (current page.north west) 
+        {
+        
+\begin{tikzpicture}[remember picture, overlay] 
+% Titel oben links 
+\coordinate[label = center: \textit{\weitext}] (L0) at (\xstart-2.3,{\ystart+3.4});
+
+% Legenden Kategorienvergleich (Spaltentitel) 
+\foreach \i/\compcat/\diag/\setno/\st in {1/\compnameA/findings/I/RedViolet!20!white,2/\compnameB/findings/II/RedViolet,3/\compnameC/reha/III/RedViolet!70!white}
+{
+\node[NS3,draw=\st] (c1) at ({\xstart+(\i-1)*(\deltax-0.00)+0.5},\ystart+2.8){Tree set \setno \\ }; %Tree \\ set \setno  ; \compcat; \st (DPx)
+ }
+
+% Plots 
+\foreach \j/\model in {1/\modelB,2/\modelC, 3/\modelD} % Zeilen
+%\foreach \j/\model in {2/\modelB, 3/\modelC, 4/\modelD} 
+{
+\foreach \i/\compx/\comp in {1/1/\compnameA,2/2/\compnameB} % 1. und 2. Spalte
+{ \node[inner sep=0pt,scale=0.53] (russell) at ({\xstart+(\i-1)*\deltax},{\ystart+(\j-1)*\deltay}){\includegraphics[trim={0 0 \trimright cm 0},clip]{./\plotdir/\plotstyle-\comp-\model_\datachoice\wei}};    
+}
+\foreach \i/\compx/\comp in {3/3/\compnameC} % 3. Spalte
+{ \node[inner sep=0pt,scale=0.53] (russell) at ({\xstart+(\i-1)*\deltaxII},{\ystart+(\j-1)*\deltay}){\includegraphics[trim={0 0 0cm 0},clip]{./\plotdir/\plotstyle-\comp-\model_\datachoice\wei}};    
+}
+}
+
+
+
+
+
+
+%% Zeilentitel) 
+\foreach \j/\texta/\textb/\textc in {1/\textBa/\textBb/\textBc,2/\textCa/\textCb/\textCc,3/\textDa/\textDb/\textDc} %1/\textAa/\textAb/\textAc,,5/\textEa/\textEb/\textEc}
+{
+%\coordinate[label = center:\rotatebox{90}{\scriptsize \textbf{\texta}}] (L0) at (\xstart-3.3,{\ystart-0.2+(\j-1)*\deltay});
+\coordinate[label = center:\rotatebox{90}{\scriptsize \textbf{\textb}}] (L0) at (\xstart-3.0,{\ystart+0.15+(\j-1)*\deltay});
+%\coordinate[label = center:\rotatebox{90}{\scriptsize \textbf{\textc}}] (L0) at (\xstart-2.7,{\ystart-0.2+(\j-1)*\deltay});
+}
+
+
+			\end{tikzpicture}
+        };
+        \end{tikzpicture}
+        
+        } % end w loop
+       % } % end comp (tree) loop
+        
+
+        
+	
+\end{document}
