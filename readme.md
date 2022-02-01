@@ -1,7 +1,7 @@
 # Introduction
 Code for the publication 
 
-Buhl, M. (202x). Interpretable clinical decision-support system for audiology based on predicted Common Audiological Functional Parameters (CAFPAs). Submitted to Diagnostics (December 2021)
+Buhl, M. (2022). Interpretable clinical decision-support system for audiology based on predicted Common Audiological Functional Parameters (CAFPAs). *Diagnostics*.
 
 mareike.buhl@uol.de
 
